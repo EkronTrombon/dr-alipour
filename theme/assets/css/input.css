@@ -1,0 +1,108 @@
+/**
+ * Tailwind CSS Input File
+ * 
+ * This file is compiled to theme/assets/css/style.css
+ * @package dr-alipour
+ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/**
+ * Custom Utilities & Components
+ */
+
+@layer components {
+  /* Containers */
+  .container-page {
+    @apply max-w-6xl mx-auto px-5 sm:px-6 lg:px-8;
+  }
+
+  /* Typography */
+  .heading-1 {
+    @apply text-4xl sm:text-5xl font-bold leading-tight;
+  }
+
+  .heading-2 {
+    @apply text-3xl sm:text-4xl font-bold leading-snug;
+  }
+
+  .heading-3 {
+    @apply text-2xl sm:text-3xl font-semibold leading-snug;
+  }
+
+  .text-body {
+    @apply text-base leading-normal text-gray-700;
+  }
+
+  /* Buttons */
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ease-in-out;
+  }
+
+  .btn-primary {
+    @apply btn bg-primary text-white hover:bg-primary-dark shadow-md hover:shadow-lg hover:-translate-y-0.5;
+  }
+
+  .btn-secondary {
+    @apply btn bg-secondary text-white hover:bg-secondary-dark shadow-md hover:shadow-lg hover:-translate-y-0.5;
+  }
+
+  .btn-outline {
+    @apply btn border-2 border-primary text-primary hover:bg-primary hover:text-white;
+  }
+
+  /* Cards */
+  .card {
+    @apply bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300;
+  }
+
+  .card-body {
+    @apply p-6;
+  }
+
+  /* Links */
+  .link {
+    @apply text-primary hover:text-primary-dark transition-colors duration-200;
+  }
+
+  .link-underline {
+    @apply link underline hover:no-underline;
+  }
+}
+
+/**
+ * Custom Styles 
+ */
+
+/* Sticky header */
+.site-header {
+  @apply sticky top-0 z-50 bg-white shadow-sm;
+}
+
+/* Responsive navigation */
+@media (max-width: 768px) {
+  nav {
+    @apply flex flex-col gap-1;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  @apply scroll-smooth;
+}
+
+/* Focus states for accessibility */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  @apply outline-2 outline-offset-2 outline-primary;
+}
+
+/* Remove default focus outline when using keyboard navigation */
+:focus:not(:focus-visible) {
+  @apply outline-none;
+}

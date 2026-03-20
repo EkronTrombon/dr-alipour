@@ -1,0 +1,27 @@
+{
+  "name": "dr-alipour-theme",
+  "version": "1.0.0",
+  "description": "Dr. Alipour Psychology & Coaching Website - WordPress Theme",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tailwindcss -i ./theme/assets/css/input.css -o ./theme/assets/css/style.css --watch",
+    "build": "tailwindcss -i ./theme/assets/css/input.css -o ./theme/assets/css/style.css --minify",
+    "watch": "npm run dev"
+  },
+  "keywords": [
+    "wordpress",
+    "theme",
+    "tailwind",
+    "alpine"
+  ],
+  "author": "",
+  "license": "GPL-2.0-or-later",
+  "devDependencies": {
+    "tailwindcss": "^3.4.1",
+    "autoprefixer": "^10.4.17",
+    "postcss": "^8.4.32"
+  },
+  "dependencies": {
+    "alpinejs": "^3.13.8"
+  }
+}
