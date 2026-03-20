@@ -12,6 +12,8 @@ module.exports = {
         'primary-dark': '#005a87',
         secondary: '#667eea',
         'secondary-dark': '#764ba2',
+        navy: '#0d1b4b',
+        'navy-light': '#1a2d6b',
       },
       fontFamily: {
         sans: [

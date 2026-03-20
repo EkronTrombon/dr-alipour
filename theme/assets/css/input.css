@@ -1,6 +1,6 @@
 /**
  * Tailwind CSS Input File
- * 
+ *
  * This file is compiled to theme/assets/css/style.css
  * @package dr-alipour
  */
@@ -53,6 +53,10 @@
     @apply btn border-2 border-primary text-primary hover:bg-primary hover:text-white;
   }
 
+  .btn-outline-white {
+    @apply btn border-2 border-white text-white hover:bg-white hover:text-navy;
+  }
+
   /* Cards */
   .card {
     @apply bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300;
@@ -70,22 +74,39 @@
   .link-underline {
     @apply link underline hover:no-underline;
   }
+
+  /* Nav */
+  .primary-menu a {
+    @apply block;
+  }
+
+  .primary-menu .nav-link-inner {
+    @apply block px-4 py-2 rounded-md text-sm font-medium text-gray-700 hover:bg-gray-100 transition-colors;
+  }
+
+  .primary-menu .current-menu-item .nav-link-inner,
+  .primary-menu .current_page_item .nav-link-inner,
+  .primary-menu .current-menu-ancestor .nav-link-inner {
+    @apply bg-primary text-white hover:bg-primary-dark;
+  }
+
+  /* Quote banners */
+  .quote-banner-light {
+    @apply py-10 text-center border-t border-b border-gray-200 bg-white;
+  }
+
+  .quote-banner-dark {
+    @apply py-10 text-center bg-navy text-white;
+  }
 }
 
 /**
- * Custom Styles 
+ * Custom Styles
  */
 
 /* Sticky header */
 .site-header {
   @apply sticky top-0 z-50 bg-white shadow-sm;
-}
-
-/* Responsive navigation */
-@media (max-width: 768px) {
-  nav {
-    @apply flex flex-col gap-1;
-  }
 }
 
 /* Smooth scrolling */
