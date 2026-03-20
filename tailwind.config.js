@@ -16,17 +16,8 @@ module.exports = {
         'navy-light': '#1a2d6b',
       },
       fontFamily: {
-        sans: [
-          '-apple-system',
-          'BlinkMacSystemFont',
-          '"Segoe UI"',
-          'Roboto',
-          'Oxygen-Sans',
-          'Ubuntu',
-          'Cantarell',
-          '"Helvetica Neue"',
-          'sans-serif',
-        ],
+        sans: ['"Nunito Sans"', 'sans-serif'],
+        display: ['Nunito', 'sans-serif'],
       },
       spacing: {
         '128': '32rem',

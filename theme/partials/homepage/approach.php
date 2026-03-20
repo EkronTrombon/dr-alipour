@@ -14,9 +14,6 @@ if (! defined('ABSPATH')) {
     class="relative py-16 sm:py-24 bg-cover bg-center"
     style="background-image: url('<?php echo esc_url(content_url('uploads/2026/03/Dr_Alipour_Home_Blog_Background.png')); ?>');"
 >
-    <!-- Dark overlay -->
-    <div class="absolute inset-0 bg-navy/85"></div>
-
     <div class="relative z-10 container-page">
 
         <!-- Section header -->
