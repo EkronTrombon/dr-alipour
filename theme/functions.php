@@ -168,89 +168,9 @@ function dr_alipour_register_blocks()
 add_action('acf/init', 'dr_alipour_register_blocks');
 
 /**
- * Register ACF Fields for custom blocks
+ * ACF field group registrations (blocks + page sections)
  */
-function dr_alipour_register_acf_fields()
-{
-    if (function_exists('acf_add_local_field_group')) {
-        // Service block fields
-        acf_add_local_field_group(array(
-            'key'      => 'group_service_block',
-            'title'    => 'Service Block Fields',
-            'fields'   => array(
-                array(
-                    'key'       => 'field_service_title',
-                    'label'     => 'Service Title',
-                    'name'      => 'service_title',
-                    'type'      => 'text',
-                    'required'  => 1,
-                ),
-                array(
-                    'key'       => 'field_service_description',
-                    'label'     => 'Description',
-                    'name'      => 'service_description',
-                    'type'      => 'textarea',
-                ),
-                array(
-                    'key'       => 'field_service_icon',
-                    'label'     => 'Icon',
-                    'name'      => 'service_icon',
-                    'type'      => 'image',
-                ),
-            ),
-            'location' => array(
-                array(
-                    array(
-                        'param'    => 'block',
-                        'operator' => '==',
-                        'value'    => 'acf/dr-alipour-service',
-                    ),
-                ),
-            ),
-        ));
-
-        // Testimonial block fields
-        acf_add_local_field_group(array(
-            'key'      => 'group_testimonial_block',
-            'title'    => 'Testimonial Block Fields',
-            'fields'   => array(
-                array(
-                    'key'       => 'field_testimonial_quote',
-                    'label'     => 'Quote',
-                    'name'      => 'testimonial_quote',
-                    'type'      => 'textarea',
-                    'required'  => 1,
-                ),
-                array(
-                    'key'       => 'field_testimonial_author',
-                    'label'     => 'Author Name',
-                    'name'      => 'testimonial_author',
-                    'type'      => 'text',
-                    'required'  => 1,
-                ),
-                array(
-                    'key'       => 'field_testimonial_rating',
-                    'label'     => 'Rating',
-                    'name'      => 'testimonial_rating',
-                    'type'      => 'range',
-                    'min'       => 1,
-                    'max'       => 5,
-                    'default'   => 5,
-                ),
-            ),
-            'location' => array(
-                array(
-                    array(
-                        'param'    => 'block',
-                        'operator' => '==',
-                        'value'    => 'acf/dr-alipour-testimonial',
-                    ),
-                ),
-            ),
-        ));
-    }
-}
-add_action('acf/init', 'dr_alipour_register_acf_fields');
+require_once THEME_DIR . '/inc/acf-setup.php';
 
 /**
  * Customize excerpt length
